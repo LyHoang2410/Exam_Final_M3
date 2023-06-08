@@ -44,7 +44,7 @@ public class DepartmentDAO {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                String name = resultSet.getString("c_name");
+                String name = resultSet.getString("name");
                 department = new Department(id, name);
             }
         } catch (SQLException e) {

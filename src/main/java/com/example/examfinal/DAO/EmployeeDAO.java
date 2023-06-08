@@ -44,7 +44,7 @@ public class EmployeeDAO {
             while (resultSet.next()) {
                 String names = resultSet.getString("name");
                 String email = resultSet.getString("email");
-                String address = resultSet.getString("adress");
+                String address = resultSet.getString("address");
                 String phone = resultSet.getString("phone");
                 Double salary = resultSet.getDouble("salary");
                 int departmentId = resultSet.getInt("c_id");
