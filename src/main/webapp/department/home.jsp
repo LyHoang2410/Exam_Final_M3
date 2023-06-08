@@ -21,7 +21,7 @@
     <h1 style="text-align: center">List Department</h1>
     <div class="row" style="width: 700px; margin: auto">
         <div class="col-lg-4">
-            <a class="btn btn-primary" style="text-decoration: none; color: white" href="/category?action=create">Create
+            <a class="btn btn-primary" style="text-decoration: none; color: white" href="/departments?action=create">Create
                 new Department</a>
         </div>
         <div class="col-lg-8">
@@ -38,12 +38,12 @@
         </thead>
 
         <tbody>
-        <c:forEach items="${deparment}" var="d">
+        <c:forEach items="${departments}" var="d">
             <tr>
                 <td>${d.id}</td>
                 <td>${d.name}</td>
                 <td>
-                    <a class="btn btn-warning" href="/department?action=update&&id=${d.id}">Update</a>
+                    <a class="btn btn-warning" href="/departments?action=update&&id=${d.id}">Update</a>
                 </td>
                 <td>
                     <button class="btn btn-danger" onclick="deleteS(${d.id})">Delete</button>
@@ -57,7 +57,7 @@
 <script>
     function deleteS(id) {
         if (confirm("Are you sure?")) {
-            window.location.href = `http://localhost:8080/category?action=delete&&id=` + id
+            window.location.href = `http://localhost:8080/departments?action=delete&&id=` + id
         }
     }
 </script>

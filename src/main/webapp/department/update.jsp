@@ -21,7 +21,7 @@
 <div class="container">
     <h1 style="text-align: center">Form update department</h1>
     <form style="width: 600px; margin: auto"
-          action="/department?action=update&&id=${d.id}" method="post">
+          action="/departments?action=update&&id=${d.id}" method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="name"
@@ -29,7 +29,7 @@
         </div>
         <div class="mb-3">
             <button class="btn btn-primary" type="submit">Update</button>
-            <a class="btn btn-secondary" href="/department">Back to home</a>
+            <a class="btn btn-secondary" href="/departments">Back to home</a>
         </div>
     </form>
 </div>

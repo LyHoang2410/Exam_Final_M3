@@ -22,7 +22,7 @@
 <div class="container">
     <h1 style="text-align: center">Form update employee</h1>
     <form style="width: 600px; margin: auto"
-          action="/employee?action=update&&id=${e.id}" method="post">
+          action="/employees?action=update&&id=${e.id}" method="post">
 
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -31,14 +31,26 @@
         </div>
 
         <div class="mb-3">
-            <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price" name="price"
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email"
                    placeholder="Enter price" value="${e.age}">
         </div>
 
         <div>
-            <label for="quantity" class="form-label">Quantity</label>
-            <input type="text" class="form-control" id="quantity" name="quantity"
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" name="address"
+                   placeholder="Enter quantity" value="${e.date}">
+        </div>
+
+        <div>
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone"
+                   placeholder="Enter quantity" value="${e.date}">
+        </div>
+
+        <div>
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="salary" name="salary"
                    placeholder="Enter quantity" value="${e.date}">
         </div>
 
@@ -47,8 +59,8 @@
             <select class="form-select" id="department" name="department"
                     aria-label="Default select example">
                 <option selected>--- Choice department ---</option>
-                <c:forEach items="${department}" var="d">
-                    <option value="${d.id}">${d.name}</option>
+                <c:forEach items="${department}" var="e">
+                    <option value="${e.id}">${e.name}</option>
                 </c:forEach>
             </select>
         </div>

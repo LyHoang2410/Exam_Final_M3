@@ -21,7 +21,7 @@
 
 <div class="container">
     <h1 style="text-align: center">Create Employee Form</h1>
-    <form style="width: 600px; margin: auto" action="/employee?action=create" method="post">
+    <form style="width: 600px; margin: auto" action="/employees?action=create" method="post">
 
         <div class="mb-3">
             <label for="name" class="form-label">NAME</label>

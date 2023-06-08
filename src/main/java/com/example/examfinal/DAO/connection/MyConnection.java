@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class MyConnection {
-        private static final String jdbcURL = "jdbc:mysql://localhost:3306/fish_product?useSSL=false";
+        private static final String jdbcURL = "jdbc:mysql://localhost:3306/employee?useSSL=false";
 
         private static final String jdbcUsername = "root";
 

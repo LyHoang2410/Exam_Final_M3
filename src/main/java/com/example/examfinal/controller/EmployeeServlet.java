@@ -76,7 +76,7 @@ public class EmployeeServlet extends HttpServlet {
         int departmentId = Integer.parseInt(request.getParameter("department"));
         if (departmentService.checkById(departmentId)) {
             employeeService.save(request);
-            response.sendRedirect("/products");
+            response.sendRedirect("/employees");
         } else {
             response.sendRedirect("/404.jsp");
         }
@@ -86,7 +86,7 @@ public class EmployeeServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         if (employeeService.checkById(id)) {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/employee/update.jsp");
-            request.setAttribute("employee", employeeService.getById(id));
+            request.setAttribute("employees", employeeService.getById(id));
             request.setAttribute("department", departmentService.showAll());
             requestDispatcher.forward(request, response);
         } else {

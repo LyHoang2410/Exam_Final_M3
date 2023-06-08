@@ -22,7 +22,7 @@
     <h1 style="text-align: center">Employee List</h1>
     <div class="row">
         <div class="col-lg-2">
-            <a class="btn btn-primary" style="text-decoration: none; color: white" href="/employee?action=create">Create
+            <a class="btn btn-primary" style="text-decoration: none; color: white" href="/employees?action=create">Create
                 new Employee</a>
         </div>
 
@@ -62,7 +62,7 @@
                 <td>${e.salary}</td>
                 <td>${e.department.name}</td>
                 <td>
-                    <a class="btn btn-warning" href="/employee?action=update&&id=${e.id}">Update</a>
+                    <a class="btn btn-warning" href="/employees?action=update&&id=${e.id}">Update</a>
                 </td>
                 <td>
                     <button class="btn btn-danger" onclick="deleteS(${e.id})">Delete</button>

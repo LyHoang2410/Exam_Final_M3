@@ -43,11 +43,11 @@ public class EmployeeDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 String names = resultSet.getString("name");
-                String email = resultSet.getString("email");
+                String email = resultSet.getString("mail");
                 String address = resultSet.getString("address");
                 String phone = resultSet.getString("phone");
                 Double salary = resultSet.getDouble("salary");
-                int departmentId = resultSet.getInt("c_id");
+                int departmentId = resultSet.getInt("d_id");
                 Department department = departmentService.getById(departmentId);
                 employee = new Employee(id, names, email, address, phone, salary, department);
             }
@@ -111,7 +111,7 @@ public class EmployeeDAO {
         while (resultSet.next()) {
             int id = resultSet.getInt("id");
             String name = resultSet.getString("name");
-            String email = resultSet.getString("email");
+            String email = resultSet.getString("mail");
             String address = resultSet.getString("address");
             String phone = resultSet.getString("phone");
             Double salary = resultSet.getDouble("salary");

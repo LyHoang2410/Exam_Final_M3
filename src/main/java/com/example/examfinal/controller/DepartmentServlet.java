@@ -54,7 +54,7 @@ public class DepartmentServlet extends HttpServlet {
     }
     private void findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/department/home.jsp");
-        request.setAttribute("department", departmentService.showAll());
+        request.setAttribute("departments", departmentService.showAll());
         requestDispatcher.forward(request, response);
     }
 
@@ -64,7 +64,7 @@ public class DepartmentServlet extends HttpServlet {
 
     private void createPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         departmentService.save(request);
-        response.sendRedirect("/department");
+        response.sendRedirect("/departments");
 
     }
 
@@ -72,7 +72,7 @@ public class DepartmentServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         if (departmentService.checkById(id)) {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/department/update.jsp");
-            request.setAttribute("department", departmentService.getById(id));
+            request.setAttribute("departments", departmentService.getById(id));
             requestDispatcher.forward(request, response);
         } else {
             response.sendRedirect("/404.jsp");
@@ -83,7 +83,7 @@ public class DepartmentServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         if (departmentService.checkById(id)) {
             departmentService.save(request);
-            response.sendRedirect("/department");
+            response.sendRedirect("/departments");
         } else {
             response.sendRedirect("/404.jsp");
         }
@@ -94,7 +94,7 @@ public class DepartmentServlet extends HttpServlet {
 
         if (departmentService.checkById(id)) {
             departmentService.deleteById(id);
-            response.sendRedirect("/department");
+            response.sendRedirect("/departments");
 
         } else {
             response.sendRedirect("/404.jsp");
